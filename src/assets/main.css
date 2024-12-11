@@ -36,6 +36,11 @@ p {
   background-color: var(--accent-color) !important;
 }
 
+.kofi:hover {
+  color: var(--background-darker);
+  background-color: #72a4f2 !important;
+}
+
 .sectionTitle {
   color: var(--accent-color);
   align-self: flex-start;

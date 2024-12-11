@@ -2,7 +2,7 @@
 
 <template>
   <div class="footer">
-    <p class="left-section">2023</p>
+    <p class="left-section">2025</p>
     <a href="mailto:dev@zelythia.net" clas="center-section navlink">dev@zelythia.net</a>
     <p>©lukas/zelythia</p>
   </div>

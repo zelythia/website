@@ -13,6 +13,11 @@
 
       <a href="https://github.com/zelythia" class="button" target="_blank">Github</a>
 
+      <a href="https://github.com/zelythia" class="button kofi" style="margin-left: 20px" target="_blank">
+        <img src="https://storage.ko-fi.com/cdn/brandasset/v2/kofi_symbol.png" alt="" style="vertical-align: sub; height: 20px" />
+        Support me on Ko-fi
+      </a>
+
       <!-- ModeToggle -->
       <div class="slider noselect" ref="modeToggle" @click="toggleMode()">
         <img src="" alt="Icon" class="toggleIcon" />
@@ -43,6 +48,8 @@ export default {
 
         document.documentElement.style.setProperty("--button-bg", "#ccc");
         document.documentElement.style.setProperty("--button-hover-bg", "rgb(29, 29, 29)");
+
+        document.documentElement.style.setProperty("--logo-bg", "#ccc");
         return;
       }
 
@@ -60,6 +67,8 @@ export default {
 
       document.documentElement.style.setProperty("--button-bg", "rgba(0, 0, 0, 0.1)");
       document.documentElement.style.setProperty("--button-hover-bg", "rgba(145, 67, 50, 0.1)");
+
+      document.documentElement.style.setProperty("--logo-bg", "rgba(0,0,0,0)");
     },
   },
   mounted() {
@@ -89,6 +98,7 @@ export default {
   background-color: var(--background-darker);
   border-radius: 10px;
 }
+
 @media (max-width: 1500px) {
   .navbar {
     max-width: 100vw;
@@ -103,6 +113,10 @@ export default {
 
 .logo {
   height: 40px;
+  background-color: var(--logo-bg);
+  border: 20px;
+  border-radius: 5px;
+  padding: 0 5px;
 }
 
 .nav {
