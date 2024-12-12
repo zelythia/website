@@ -133,17 +133,22 @@ export default {
           <div class="minecraftDiv_1">
             <p style="margin-top: 0">
               AutoTools is a Minecraft mod that allows you to automatically switch to the best tool for blocks/mobs with the press of a button. It looks through your whole
-              inventory and choses the best tool according to mining level/speed, damage, enchantments.
+              inventory and choses the best tool according to mining level/speed, damage and enchantments. The Mod features a high level of customisation with many config options.
             </p>
 
-            <a href="https://www.curseforge.com/minecraft/mc-mods/autotools" target="_blank">
-              <img
-                style="width: 150px; height: 150px; border-radius: 10px; margin-left: 10px"
-                src="/media/autotools/curseforge-icon.jpg"
-                alt="Download at Curseforge"
-                class="highlight_hover"
-              />
-            </a>
+            <div style="display: flex; flex-direction: row; gap: 15px">
+              <a href="https://modrinth.com/mod/minecraft_autotools" target="_blank">
+                <img src="/media/minecraft/modrinth-icon.png" alt="Download at Curseforge" class="highlight_hover fullButtonImage" />
+              </a>
+
+              <a href="https://www.curseforge.com/minecraft/mc-mods/autotools" target="_blank">
+                <img src="/media/minecraft/curseforge-icon.jpg" alt="Download at Curseforge" class="highlight_hover fullButtonImage" />
+              </a>
+
+              <a href="https://github.com/zelythia/discord-archify" target="_blank" rel="noreferrer noopener" class="button imageButton highlight_hover">
+                <img alt="image" src="/media/github-icon.png" class="buttonImage" />
+              </a>
+            </div>
           </div>
         </div>
       </ProjectDescription>
@@ -352,6 +357,12 @@ header {
   background-color: var(--button-bg);
 }
 
+.fullButtonImage {
+  width: 86px;
+  height: 86px;
+  border-radius: 10px;
+}
+
 .standaloneButtonImage {
   width: 86px;
   height: 86px;
@@ -360,7 +371,7 @@ header {
 
 .minecraftDiv_1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .discordDiv_1 {
@@ -400,16 +411,6 @@ header {
   .discordDiv_1 {
     flex-direction: column;
     align-items: center;
-  }
-
-  .discordDiv_1 .imageButton {
-    width: 140px;
-    height: 140px;
-  }
-
-  .discordDiv_1 .buttonImage {
-    width: 110px;
-    height: 110px;
   }
 }
 
@@ -465,6 +466,11 @@ header {
   .imageButton {
     width: 95px;
     height: 95px;
+  }
+
+  .fullButtonImage {
+    width: 111.5px;
+    height: 111.5px;
   }
 
   .buttonImage {
@@ -548,6 +554,11 @@ header {
   .imageButton {
     width: 100px;
     height: 100px;
+  }
+
+  .fullButtonImage {
+    width: 116px;
+    height: 116px;
   }
 
   .homeButtonContainer {
