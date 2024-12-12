@@ -83,33 +83,26 @@ export default {
     <div class="sectionContainer" id="projects">
       <div class="projectsDiv noselect">
         <!-- Minecraft -->
-        <ProjectCategoryTile
-          imageSrc="https://imgs.search.brave.com/ZHP3_JaTXX7R1mc1QaZVggyLbGGUOW1tkwoTbVApJN0/rs:fit:1000:1000:1/g:ce/aHR0cHM6Ly9neWF6/by5jb20vYTRhYmM1/ZmRiOTY1ZDFiOTdk/YjM4NDUzMDEyZWZj/NzMvdGh1bWIvMTAw/MA">
+        <ProjectCategoryTile imageSrc="/media/minecraft.svg">
           <div class="innerProjectContainer">
-            <ProjectTile imageSrc="/media/AutoToolsLogo.png" @click="changeProject('AutoTools')"
-              :highlighted="visibleDescription == 'AutoTools'"></ProjectTile>
+            <ProjectTile imageSrc="/media/AutoToolsLogo.png" @click="changeProject('AutoTools')" :highlighted="visibleDescription == 'AutoTools'"></ProjectTile>
 
-            <ProjectTile imageSrc="/media/AE.png" @click="changeProject('')" :highlighted="visibleDescription == 'AE'">
-            </ProjectTile>
+            <ProjectTile imageSrc="/media/AE.png" @click="changeProject('')" :highlighted="visibleDescription == 'AE'"> </ProjectTile>
           </div>
         </ProjectCategoryTile>
 
         <!-- Discord -->
-        <ProjectCategoryTile
-          imageSrc="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg">
+        <ProjectCategoryTile imageSrc="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg">
           <div class="innerProjectContainer">
-            <ProjectTile imageSrc="/media/archify/archify_green.png" @click="changeProject('Archify')"
-              :highlighted="visibleDescription == 'Archify'"></ProjectTile>
+            <ProjectTile imageSrc="/media/archify/archify_green.png" @click="changeProject('Archify')" :highlighted="visibleDescription == 'Archify'"></ProjectTile>
           </div>
         </ProjectCategoryTile>
 
         <!-- Games -->
         <ProjectCategoryTile imageSrc="/media/game-controller.svg">
           <div class="innerProjectContainer">
-            <ProjectTile imageSrc="/media/games/TIO/icon.png" @click="changeProject('TIO')"
-              :highlighted="visibleDescription == 'TIO'"></ProjectTile>
-            <ProjectTile imageSrc="/media/games/pong/icon.ico" @click="changeProject('pong')"
-              :highlighted="visibleDescription == 'pong'"></ProjectTile>
+            <ProjectTile imageSrc="/media/games/TIO/icon.png" @click="changeProject('TIO')" :highlighted="visibleDescription == 'TIO'"></ProjectTile>
+            <ProjectTile imageSrc="/media/games/pong/icon.ico" @click="changeProject('pong')" :highlighted="visibleDescription == 'pong'"></ProjectTile>
           </div>
         </ProjectCategoryTile>
       </div>
@@ -117,18 +110,16 @@ export default {
       <!-- Default Description -->
       <ProjectDescription title="Projects" v-if="visibleDescription == 'start'">
         <p>
-          This is a collection of all my public available projects. Most of them also have their source code availabel
-          at
+          This is a collection of all my public available projects. Most of them also have their source code availabel at
           <a href="https://github.com/zelythia" target="_blank" class="link">Github</a>.
         </p>
 
         <div>
-          <a href="https://github.com/zelythia/JungleJumper" target="_blank" rel="noreferrer noopener"
-            class="button imageButton labeledButton">
+          <!-- <a href="https://github.com/zelythia/JungleJumper" target="_blank" rel="noreferrer noopener" class="button imageButton labeledButton">
             <img alt="image" src="/media/github-icon.png" class="buttonImage" />
 
             <a href=""><b>Jungle Jumper</b></a>
-          </a>
+          </a> -->
         </div>
       </ProjectDescription>
 
@@ -141,16 +132,17 @@ export default {
 
           <div class="minecraftDiv_1">
             <p style="margin-top: 0">
-              AutoTools is a Minecraft mod that allows you to automatically switch to the best tool for blocks/mobs with
-              the press
-              of a button. It looks through your whole inventory and choses the best tool according to mining
-              level/speed, damage,
-              enchantments.
+              AutoTools is a Minecraft mod that allows you to automatically switch to the best tool for blocks/mobs with the press of a button. It looks through your whole
+              inventory and choses the best tool according to mining level/speed, damage, enchantments.
             </p>
 
             <a href="https://www.curseforge.com/minecraft/mc-mods/autotools" target="_blank">
-              <img style="width: 150px; height: 150px; border-radius: 10px; margin-left: 10px"
-                src="/media/autotools/curseforge-icon.jpg" alt="Download at Curseforge" class="highlight_hover" />
+              <img
+                style="width: 150px; height: 150px; border-radius: 10px; margin-left: 10px"
+                src="/media/autotools/curseforge-icon.jpg"
+                alt="Download at Curseforge"
+                class="highlight_hover"
+              />
             </a>
           </div>
         </div>
@@ -163,23 +155,25 @@ export default {
       <!-- Discord -->
       <ProjectDescription title="Archify" v-if="visibleDescription == 'archify'">
         <p style="margin-top: 0">
-          Archify is a simple Discord-Bot that lets you save messages from servers, just by right clicking the message.
-          The Bot
-          uses Discord.js to communicate with the Discord-API and it's entire source code is available at Github.
+          Archify is a simple Discord-Bot that lets you save messages from servers, just by right clicking the message. The Bot uses Discord.js to communicate with the Discord-API
+          and it's entire source code is available at Github.
         </p>
 
         <div class="discordDiv_1">
-          <img src="/media/archify/save.png" alt="Save by right clicking a message"
-            style="border-radius: 10px; min-height: 170px; width: 100%" />
+          <img src="/media/archify/save.png" alt="Save by right clicking a message" style="border-radius: 10px; min-height: 170px; width: 100%" />
 
           <div style="display: flex; gap: 10px; flex-direction: column; justify-content: center">
-            <a href="https://github.com/zelythia/discord-archify" target="_blank" rel="noreferrer noopener"
-              class="button imageButton">
+            <a href="https://github.com/zelythia/discord-archify" target="_blank" rel="noreferrer noopener" class="button imageButton">
               <img alt="image" src="/media/github-icon.png" class="buttonImage" />
             </a>
 
-            <a href="https://discord.com/oauth2/authorize?client_id=936276333309337622&scope=bot%20applications.commands&permissions=1024"
-              class="button" style="background-color: rgb(79, 84, 92)" target="_blank">Invite</a>
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=936276333309337622&scope=bot%20applications.commands&permissions=1024"
+              class="button"
+              style="background-color: rgb(79, 84, 92)"
+              target="_blank"
+              >Invite</a
+            >
           </div>
         </div>
       </ProjectDescription>
@@ -191,22 +185,19 @@ export default {
 
           <div style="display: flex; flex-direction: column">
             <p style="margin-top: 0">
-              Trash it out! is a mobile game made with the Unity GameEngine. The main objective of the game is to sort
-              the trash
-              falling from the sky into the corresponding bins. <br />
+              Trash it out! is a mobile game made with the Unity GameEngine. The main objective of the game is to sort the trash falling from the sky into the corresponding bins.
+              <br />
               <br />
               It is currently only available on the Amazon Appstore or as a direkt download on this page.
             </p>
 
             <div class="tioDesc_2">
-              <a href="/download/TrashItOut!.apk" download target="_blank" rel="noreferrer noopener"
-                class="button imageButton">
+              <a href="/download/TrashItOut!.apk" download target="_blank" rel="noreferrer noopener" class="button imageButton">
                 <img alt="image" src="/media/download-icon.svg" class="buttonImage" />
               </a>
 
               <a href="">
-                <img class="link standaloneButtonImage" src="/media/games/TIO/amazon-appstore-icon.png" alt=""
-                  style="border-radius: 10px" />
+                <img class="link standaloneButtonImage" src="/media/games/TIO/amazon-appstore-icon.png" alt="" style="border-radius: 10px" />
               </a>
             </div>
           </div>
@@ -217,19 +208,16 @@ export default {
         <img src="/media/games/pong/pong.png" alt="Pong Game" style="width: 100%; border-radius: 10px" />
 
         <p>
-          This is a simple Pong Game made with the Godot Game Engine. It features a 1 Player-Mode against the AI and a 2
-          Players-Mode against each other. There still is potential for updates like different difficulties and maybe a
-          multiplayer mode, that may come in the future.<br />
-          Right now it's available to play on <a href="https://zelythia.itch.io/pong" target="_blank"
-            class="link">itch.io</a> and
-          there are also downloads available for Windows and Linux.
+          This is a simple Pong Game made with the Godot Game Engine. It features a 1 Player-Mode against the AI and a 2 Players-Mode against each other. There still is potential
+          for updates like different difficulties and maybe a multiplayer mode, that may come in the future.<br />
+          Right now it's available to play on <a href="https://zelythia.itch.io/pong" target="_blank" class="link">itch.io</a> and there are also downloads available for Windows
+          and Linux.
         </p>
 
         <div style="display: flex; flex-direction: row; gap: 25px">
           <img src="/media/games/pong/itch.io.svg" alt="Itch.io" style="height: 70px" />
 
-          <a href="/download/Pong.zip" target="_blank" rel="noreferrer noopener" class="button imageButton"
-            style="height: 55px; width: 55px" download>
+          <a href="/download/Pong.zip" target="_blank" rel="noreferrer noopener" class="button imageButton" style="height: 55px; width: 55px" download>
             <img alt="image" src="/media/download-icon.svg" class="buttonImage" style="height: 50px" />
           </a>
         </div>
@@ -278,7 +266,7 @@ header {
   flex-direction: row;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 120px;
+  margin-top: 115px;
   justify-content: center;
   min-width: 200px;
   max-width: 200px;
@@ -290,6 +278,7 @@ header {
   /* IE and Edge*/
   padding: 0 10px 60px;
   z-index: 100;
+  padding-top: 5px;
 }
 
 .projectsDiv::-webkit-scrollbar {
