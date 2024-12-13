@@ -221,13 +221,13 @@ export default {
             </p>
 
             <div class="tioDesc_2">
-              <a href="/download/TrashItOut!.apk" download target="_blank" rel="noreferrer noopener" class="button imageButton">
+              <a href="/download/TrashItOut!.apk" download target="_blank" rel="noreferrer noopener" class="button imageButton tioButton">
                 <img alt="image" src="/media/download-icon.svg" class="buttonImage" />
               </a>
 
-              <a href="">
+              <!-- <a href="">
                 <img class="link standaloneButtonImage" src="/media/games/TIO/amazon-appstore-icon.png" alt="" style="border-radius: 10px" />
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -244,7 +244,9 @@ export default {
         </p>
 
         <div style="display: flex; flex-direction: row; gap: 25px">
-          <img src="/media/games/pong/itch.io.svg" alt="Itch.io" style="height: 70px" />
+          <a href="https://zelythia.itch.io/pong" target="_blank">
+            <img src="/media/games/pong/itch.io.svg" alt="Itch.io" style="height: 70px" />
+          </a>
 
           <a href="/download/Pong.zip" target="_blank" rel="noreferrer noopener" class="button imageButton" style="height: 55px; width: 55px" download>
             <img alt="image" src="/media/download-icon.svg" class="buttonImage" style="height: 50px" />
@@ -412,7 +414,7 @@ header {
 }
 
 .tioImg_1 {
-  width: 50%;
+  min-width: 50%;
   border-radius: 10px;
 }
 
@@ -435,6 +437,10 @@ header {
 
 .labeledButton:hover a {
   text-decoration: underline;
+}
+
+.tioButton {
+  width: 100% !important;
 }
 
 @media (max-width: 1100px) {
