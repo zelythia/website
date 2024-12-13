@@ -78,6 +78,7 @@ export default {
   max-width: 70%;
   max-height: 70%;
   min-width: 50%;
+  border-radius: 5px;
 }
 
 .projectContainer {

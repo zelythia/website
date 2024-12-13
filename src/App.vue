@@ -33,7 +33,7 @@ export default {
   },
 
   mounted() {
-    const allowedLocations = ["start", "autotools", "ae", "archify", "tio", "pong"];
+    const allowedLocations = ["start", "autotools", "aequitas", "archify", "tio", "pong"];
     const hash = window.location.hash.substring(1);
 
     if (hash == "") return;
@@ -87,7 +87,7 @@ export default {
           <div class="innerProjectContainer">
             <ProjectTile imageSrc="/media/AutoToolsLogo.png" @click="changeProject('AutoTools')" :highlighted="visibleDescription == 'AutoTools'"></ProjectTile>
 
-            <ProjectTile imageSrc="/media/AE.png" @click="changeProject('')" :highlighted="visibleDescription == 'AE'"> </ProjectTile>
+            <ProjectTile imageSrc="/media/aequitas/icon.png" @click="changeProject('Aequitas')" :highlighted="visibleDescription == 'aequitas'"> </ProjectTile>
           </div>
         </ProjectCategoryTile>
 
@@ -136,7 +136,7 @@ export default {
               inventory and choses the best tool according to mining level/speed, damage and enchantments. The Mod features a high level of customisation with many config options.
             </p>
 
-            <div style="display: flex; flex-direction: row; gap: 15px">
+            <div class="buttonRow">
               <a href="https://modrinth.com/mod/minecraft_autotools" target="_blank">
                 <img src="/media/minecraft/modrinth-icon.png" alt="Download at Curseforge" class="highlight_hover fullButtonImage" />
               </a>
@@ -145,7 +145,7 @@ export default {
                 <img src="/media/minecraft/curseforge-icon.jpg" alt="Download at Curseforge" class="highlight_hover fullButtonImage" />
               </a>
 
-              <a href="https://github.com/zelythia/discord-archify" target="_blank" rel="noreferrer noopener" class="button imageButton highlight_hover">
+              <a href="https://github.com/zelythia/autotools" target="_blank" rel="noreferrer noopener" class="button imageButton highlight_hover">
                 <img alt="image" src="/media/github-icon.png" class="buttonImage" />
               </a>
             </div>
@@ -153,8 +153,32 @@ export default {
         </div>
       </ProjectDescription>
 
-      <ProjectDescription title="" v-if="visibleDescription == 'ae'">
-        <p style="font-size: 300px; text-align: center; margin: 0">AE</p>
+      <ProjectDescription title="Aequitas" v-if="visibleDescription == 'aequitas'">
+        <div class="minecraftDiv_2">
+          <img src="/media/aequitas/gameplay_title.png" alt="Gameplay Image" style="width: 100%; border-radius: 10px" />
+
+          <p>
+            Freely exchange items, using the worlds esseence: <br />
+            In Minecraft, everything is made out of a special essence. With Aequitas you are able to freely exchange this essence and convert every item into other items using
+            Crafting and Sampling Pedestals. <br />
+            You are also able to collect the essence using special Collection Bowl and create items from "nothing". <br />
+            The Essence is also a powerful and mythical resource and can be crafted into powerful armor and tools.
+          </p>
+
+          <div class="buttonRow">
+            <a href="https://modrinth.com/mod/aequitas" target="_blank">
+              <img src="/media/minecraft/modrinth-icon.png" alt="Download at Curseforge" class="highlight_hover fullButtonImage" />
+            </a>
+
+            <a href="https://www.curseforge.com/minecraft/mc-mods/aequitas" target="_blank">
+              <img src="/media/minecraft/curseforge-icon.jpg" alt="Download at Curseforge" class="highlight_hover fullButtonImage" />
+            </a>
+
+            <a href="https://github.com/zelythia/aequitas" target="_blank" rel="noreferrer noopener" class="button imageButton highlight_hover">
+              <img alt="image" src="/media/github-icon.png" class="buttonImage" />
+            </a>
+          </div>
+        </div>
       </ProjectDescription>
 
       <!-- Discord -->
@@ -355,6 +379,12 @@ header {
   transition: 0.3s;
   border-radius: 4px;
   background-color: var(--button-bg);
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 
 .fullButtonImage {
