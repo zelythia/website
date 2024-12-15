@@ -4,6 +4,9 @@ import NavigationBar from "./components/NavigationBar.vue";
 import ProjectCategoryTile from "./components/ProjectCategoryTile.vue";
 import ProjectDescription from "./components/ProjectDescription.vue";
 import ProjectTile from "./components/ProjectTile.vue";
+import Chart from "./components/Chart.vue";
+import DailyChart from "./components/DailyChart.vue";
+import TotalChart from "./components/TotalChart.vue";
 
 export default {
   components: {
@@ -12,11 +15,15 @@ export default {
     ProjectTile,
     ProjectDescription,
     FooterDiv,
+    Chart,
+    TotalChart,
+    DailyChart,
   },
 
   data() {
     return {
       visibleDescription: "start",
+      window: window,
     };
   },
 
@@ -110,7 +117,7 @@ export default {
       <!-- Default Description -->
       <ProjectDescription title="Projects" v-if="visibleDescription == 'start'">
         <p>
-          This is a collection of all my public available projects. Most of them also have their source code availabel at
+          This is a collection of all my public available projects. Most of them also have their source code availabel on
           <a href="https://github.com/zelythia" target="_blank" class="link">Github</a>.
         </p>
 
@@ -254,6 +261,14 @@ export default {
         </div>
       </ProjectDescription>
     </div>
+
+    <div v-if="window.location.hash == '#graphs'" class="sectionContainer" id="graphs">
+      <TotalChart></TotalChart>
+
+      <Chart></Chart>
+
+      <DailyChart></DailyChart>
+    </div>
   </main>
 
   <footer>
@@ -292,6 +307,23 @@ header {
   height: 90vh;
 }
 
+#graphs {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin: 0 80px 100px;
+  height: 100%;
+}
+
+.chart {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  background-color: #222222;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .projectsDiv {
   display: flex;
   flex-direction: row;
@@ -308,7 +340,6 @@ header {
   -ms-overflow-style: none;
   /* IE and Edge*/
   padding: 0 10px 60px;
-  z-index: 100;
   padding-top: 5px;
 }
 
